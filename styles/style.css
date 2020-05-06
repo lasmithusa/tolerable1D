@@ -1,0 +1,120 @@
+body {
+    background-color: #0E9594;
+    font-family: Noto Sans, sans-serif;
+    color: white;
+}
+
+#panel {
+    background-color: #127475;
+	position: fixed;
+	margin: 0px;
+	padding: 0px 10px 0px 16px;
+	top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 30%;
+    max-width: 400px;
+    min-width: 320px;
+    overflow-x: hidden;
+	overflow-y: auto;
+    box-sizing: border-box;
+}
+
+div.subpanel {
+    margin: 1rem 0rem;
+    margin-right: 0.3rem;
+    /* border: 1px solid lightgray;
+    border-radius: 5px; */
+    padding: 0.6rem 0rem;;
+}
+
+h2, h3 {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+#title {
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: 1000;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.6rem;
+    /* margin-left: 0.1rem; */
+    margin-bottom: -0.4rem;
+}
+
+label {
+    display: block;
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+label.firstLabel {
+    padding-top: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+.varList li {
+    list-style: none;
+    padding: 5px;
+    margin-left: -40px;
+    margin-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.detailList li {
+    list-style: none;
+    margin-left: -40px;
+    margin-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.varList li[selected] {
+    background-color: #071E22;
+}
+
+input {
+    color: white;
+    background-color: #0E9594;
+    border: 1px solid lightgray;
+    padding:  0.2rem 0.2rem;
+    font-size: 0.9rem;
+}
+
+select {
+    color: white;
+    background-color: #0E9594;
+    border: 1px solid lightgray;
+    padding:  0.2rem 0.2rem;
+    font-size: 0.9rem;
+}
+select option {
+    color: white;
+    background-color: #0E9594;
+    border: 1px solid lightgray;
+}
+
+button {
+    color: white;
+    background-color: #cc6652;
+    border: 1px solid white;
+    padding:  5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-right: 0.2rem;
+}
+
+.downloadBtn {
+    display: block;
+    margin: 0.5rem 0rem;
+}
+
+a {
+    color: lightgray;
+}

@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolerable1D</title>
+    <script src="scripts/app.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="panel">
+        <h1 id="title">Tolerable1D</h1>
+        <!-- <p class="title">Tolerable</p>
+        <p class="title">1D</p> -->
+        <div id="independentpanel" class="subpanel">
+            <h2>Independent variables</h2>
+            <button id="add_independent" title="Add a new independent variable">Add Independent</button>
+            <button id="rem_independent" class="firstDualBtn"
+                title="Remove selected independent variable">Remove</button>
+            <button id="clr_independents" class="lastDualBtn" title="Clear all independent variables">Clear</button>
+
+            <ul id="independentlist" class="varList">
+                <!-- <li id="independent0" class="independent" selected>#1 - glandDepth - Nominal: 1.75 - Tolerance: +0.05, -0.05</li> -->
+                <!-- <li id="independent1" class="independent">#2 - glandWidth - Nominal: 1.35 - Tolerance: +0.1, -0.1</li>
+                <li id="independent2" class="independent">#3 - TabHeight - Nominal: 1 - Tolerance: +0.05, -0.05</li>
+                <li id="independent3" class="independent">#4 - oRingChord - Nominal: 1 - Tolerance: +0.08, -0.08</li> -->
+            </ul>
+
+            <div id="independentdetails" hidden>
+                <h3>Independent variable details</h3>
+                <label class="firstLabel" for="independent_name">Variable name:</label>
+                <input type="text" name="independent_name" id="independent_name" class="trackedInput">
+                <label for="independent_distribution">Distribution type:</label>
+                <select id="independent_distribution" class="trackedInput">
+                    <option value="norm">Normal</option>
+                    <option value="uni">Uniform</option>
+                </select>
+                <label for="independent_nominal">Nominal value:</label>
+                <input type="number" name="independent_nominal" id="independent_nominal" class="trackedInput">
+                <label for="independent_upper_tol">Upper tolerance:</label>
+                <input type="number" name="independent_upper_tol" id="independent_upper_tol" class="trackedInput">
+                <label for="independent_lower_tol">Lower tolerance:</label>
+                <input type="number" name="independent_lower_tol" id="independent_lower_tol" class="trackedInput">
+                <div id="norm_details" class="independent_details_sub">
+                    <label for="independent_sigma_level">Sigma level:</label>
+                    <input type="number" name="independent_sigma_level" id="independent_sigma_level" class="trackedInput">
+                </div>
+            </div>
+
+        </div>
+        <div id="dependentpanel" class="subpanel">
+            <h2>Dependent variables</h2>
+            <button id="add_dependent" title="Add a new dependent variable">Add Dependent</button>
+            <button id="rem_dependent" class="firstDualBtn" title="Remove selected dependent variable">Remove</button>
+            <button id="clr_dependents" class="lastDualBtn" title="Clear all dependent variables">Clear</button>
+
+            <!--<li class="dependent">#1 - O-ring Compression</li>
+            <li class="dependent" selected>#2 - Gland Fill</li>-->
+
+            <ul id="dependentlist" class="varList">
+            </ul>
+
+            <div id="dependentdetails" hidden>
+                <h3>Dependent variable details</h3>
+                <label class="firstLabel" for="dependent_name">Variable name:</label>
+                <input type="text" name="dependent_name" id="dependent_name" class="trackedInput">
+                <label for="dependent_definition">Dependent definition:</label>
+                <input type="text" name="dependent_definition" id="dependent_definition" class="trackedInput">
+            </div>
+
+        </div>
+        <div id="simsettings" class="subpanel">
+            <h2>Simulation settings</h2>
+            <label class="firstLabel" for="N">Iteration count:</label>
+            <input type="number" name="iterationcount" id="N">
+            <label for="alpha">Alpha level:</label>
+            <input type="number" name="alphalevel" id="alpha">
+        </div>
+        <div id="download" class="subpanel">
+            <h2>Download</h2>
+
+            <button download_type=0 class="downloadBtn">Download Visualization</button>
+            <button download_type=1 class="downloadBtn">Download Report</button>
+            <button download_type=2 class="downloadBtn">Download Data</button>
+        </div>
+        <div id="about" class="subpanel">
+            <h2>About</h2>
+            <p>Tolerable1D is a tool for running one-dimensional <a
+                    href="https://en.wikipedia.org/wiki/Tolerance_analysis" target="_blank">tolerance analysis</a> on
+                mechanical parts and assemblies using the
+                <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method" target="_blank"> Monte Carlo method</a>.
+                Tolerable1D allows you to quickly predict the expected variation of your designs at production volumes.
+            </p>
+            <p>Why this tool was created? Excel plugins got me down. I needed a pain free way to run Monte Carlo
+                simulations when designing press fits, snap tabs, and seals in my work as an R&D Engineer.
+                This tool fit the bill. I'd like this tool to improve your workflow as it has mine.
+            </p>
+            <p>You can find more of my work here: <a href="http://lukesmith.engineer"
+                    target="_blank">lukesmith.engineer</a></p>
+            <span class="rem">Support: <a href="mailto:me@lukesmith.engineer">me@lukesmith.engineer</a></span>
+            <div id="share">
+                <p>If you like this tool, please share:<br>
+                    <a href="https://twitter.com/intent/tweet?original_referer=http%3a%2f%2fgeargenerator.com&amp;url=http%3a%2f%2fgeargenerator.com&amp;text=What+a+nice+gear+generator+%23HTML+%23CSS+via+%40AbelVincze"
+                        target="_blank"><svg style="margin-top: 12px;" version="1.2" baseProfile="tiny" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="34px" height="25px" viewBox="0 0 34 25" xml:space="preserve">
+                            <path class="shareicon"
+                                d="M31.016,11.572c-0.971,0-1.908-0.136-2.793-0.384c0-0.03,0-0.06,0-0.091c0.154,0.02,0.315,0.03,0.479,0.03c1.3,0,2.445-0.629,3.129-1.587c-0.612,0.246-1.283,0.382-1.987,0.382c-0.63,0-1.233-0.109-1.788-0.308c-0.145-0.658-0.377-1.301-0.709-1.913c-2.406-4.452-6.177-3.977-6.177-3.977s2.776-0.54,2.646-1.276C23.686,1.71,21.12,2.852,21.12,2.852s1.424-0.77,1.224-1.096c-0.189-0.311-2.305,0.961-2.305,0.961s0.348-0.492,0.215-0.635c-0.134-0.143-1.818,1.271-3.108,3.364c-1.291,2.094-1.803,4.013-1.803,4.013s-0.664-0.812-2.166-1.824c-1.606-1.078-8.432-3.583-8.432-3.583S4.483,4.901,5.447,6.391c0.606,0.94,1.946,1.487,1.946,1.487s-0.552,0-0.98,0.06c-0.398,0.056-0.88,0.167-0.88,0.167S5.396,9.21,6.65,10.164c1.253,0.952,2.341,1.048,2.341,1.048s-0.682,0.049-1.197,0.225c-0.534,0.184-0.92,0.644-0.92,0.644s0.409,0.794,1.268,1.365c1.134,0.753,2.604,0.515,2.604,0.515s-1.316,0.338-1.23,1.372c0.123,1.518,2.347,1.211,2.347,1.211c-1.527,1.587-3.729,2.512-6.158,2.512c-2.196,0-4.213-0.74-5.703-2.072c0,0,8.422,11.141,22.605,3.168c2.902-1.633,4.925-4.441,5.47-7.353c0.256,0.049,0.521,0.076,0.792,0.076c1.206,0,2.283-0.52,3.009-1.336C31.591,11.557,31.305,11.572,31.016,11.572z" />
+                        </svg></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgeargenerator.com"
+                        target="_blank"><svg version="1.2" baseProfile="tiny" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="30px" height="25px" viewBox="0 0 30 25" xml:space="preserve">
+                            <path class="shareicon"
+                                d="M20.035,24.729h-5.323V12.365h-2.659V8.103h2.659V5.545C14.712,2.069,16.216,0,20.48,0h3.551v4.263h-2.219c-1.662,0-1.771,0.596-1.771,1.708l-0.005,2.132h4.022l-0.473,4.262h-3.551V24.729z" />
+                        </svg></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="result">
+
+    </div>
+</body>
+
+</html>
